@@ -1,7 +1,9 @@
 Portfolio Project
 
 Overview:
-This portfolio project is designed to showcase my skills and work in UI/UX design, sound design, and web development. The portfolio features a responsive design with smooth animations, a back-to-top button, and a dark mode toggle. The site is built with HTML, CSS, and JavaScript to demonstrate my abilities in these areas.
+This portfolio project is designed to showcase my skills and work in UI/UX design, sound design, and web development.
+The portfolio features a responsive design with smooth animations, and back-to-top button. The site is built with HTML, CSS,
+and JavaScript to demonstrate my abilities in these areas.
 
 Features:
 Responsive Design - The layout adjusts to different screen sizes, ensuring a consistent experience on desktops, tablets, and mobile devices.
