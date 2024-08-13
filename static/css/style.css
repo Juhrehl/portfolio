@@ -1,0 +1,762 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #484349;
+    scroll-behavior: smooth;
+}
+
+/* header designs */
+header {
+    color: #F7F0F0;
+    background-color: #484349;
+    font-size: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 10px 0;
+    text-align: center;
+    font-family: 'Aesthetic', sans-serif;
+}
+
+header h1 {
+    margin-bottom: 0px;
+    margin-top: 0px
+}
+
+#baybayin{
+    font-size: 60px;
+}
+
+header p{
+    margin: 40px;
+    font-size: 20px;
+    font-family: 'Blissful Beauty Demo', sans-serif;
+}
+
+/* Header Design */
+header {
+    color: #F7F0F0;
+    background-color: #484349;
+    font-size: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 10px 0;
+    text-align: center;
+    font-family: 'Aesthetic', sans-serif;
+    overflow: hidden; /* Prevents overflow issues */
+    position: relative; /* Necessary for the pseudo-element */
+}
+
+header h1 {
+    margin: 0;
+    animation: fadeInUp 1s ease-out;
+}
+
+#baybayin {
+    font-size: 60px;
+    animation: pulse 2s infinite;
+}
+
+header p {
+    margin: 40px;
+    font-size: 20px;
+    font-family: 'Blissful Beauty Demo', sans-serif;
+    animation: fadeIn 1.5s ease-out;
+}
+
+/* Header Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+        color: #F7F0F0;
+    }
+    50% {
+        transform: scale(1.1);
+        color: #B3ABAC;
+    }
+}
+
+/* navigation design */
+nav {
+    display: flex;
+    justify-content: center; 
+    background-color: #484349;
+    padding: 15px 0; 
+    position: fixed; 
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 1000; /* Ensure the nav stays above other content */
+    transition: padding 0.3s, background-color 0.3s;
+}
+
+nav.minimal {
+    padding: 5px 0; 
+    background-color: rgba(72, 67, 73, 0.9); /*  transparent background */
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 30px;
+}
+
+nav li {
+    position: relative;
+}
+
+nav a {
+    font-family: 'Neue Machina', sans-serif;
+    font-weight: light; 
+    font-size: 20px;
+    text-decoration: none;
+    color: #F7F0F0;
+    padding: 10px 15px;
+    border-radius: 20px;
+    transition: color 0.3s; /* color transition */
+}
+
+nav a:hover {
+    background-color: #F7F0F0; 
+    color: #484349; 
+}
+
+
+/* about me design */
+#about {
+    background-color: #484349;
+    padding: 50px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+}
+
+#about .container {
+    max-width: 80%;
+    margin: 0 auto; 
+    display: flex; 
+    align-items: center; 
+    gap: 30px; 
+}
+
+
+#about h2 {
+    font-family: Neue Machina, sans-serif;
+    font-weight: bold;
+    font-size: 2em; 
+    color: #F7F0F0;
+    margin-bottom: 20px; 
+}
+
+#about p {
+    font-family: Neue Machina, sans-serif;
+    font-weight: lighter;
+    color: #F7F0F0;
+    line-height: 1.5; /* space between lines of text */
+}
+
+#about img {
+    max-width: 40%; 
+    height: auto;
+    border-radius: 10px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    transition: transform 0.3s ease;
+}
+
+#about img:hover {
+    transform: scale(1.05); 
+}
+
+.skills-list {
+    list-style: disc; 
+    padding-left: 20px; 
+    margin: 0;
+    font-family: Neue Machina, sans-serif;    
+    font-weight: lighter;
+    font-size: 1.1em;
+    color: #F7F0F0;
+}
+
+.skills-list li {
+    margin-bottom: 8px;
+}
+
+/* about animation */
+#about {
+    opacity: 0;
+    transform: rotateY(-20deg) scale(0.9); /* Start with a slight rotation and scale down */
+    transform-origin: center;
+    transition: opacity 0.8s ease, transform 0.8s ease;
+    perspective: 1000px; /* Ensure 3D effect */
+}
+
+/* When visible */
+#about.visible {
+    opacity: 1;
+    transform: rotateY(0) scale(1); /* Rotate to normal and scale up */
+}
+
+
+/* Work design */
+#work {
+    background-color: #484349;
+    padding: 50px 20px;
+    text-align: center;
+    color: #F7F0F0;
+}
+
+#work .container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+#work h2 {
+    font-family: 'Neue Machina', sans-serif;
+    font-weight: light;
+    font-size: 2.5em;
+    color: #F7F0F0;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    text-align: center;
+    margin-bottom: 10px;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#work h2::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 3px;
+    background-color: #F7F0F0;
+    margin: 10px auto 0 auto;
+    transition: width 0.3s ease;
+}
+
+#work h2:hover::after {
+    width: 80px;
+}
+
+#work p {
+    font-family: 'Neue Machina', sans-serif;
+    font-weight: lighter;
+    font-size: 1.2em;
+    margin-bottom: 30px;
+    color: #B3ABAC;
+}
+
+/* Grid layout for work items */
+.work-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); /* to control how columns behave */
+    gap: 20px;
+}
+
+.work-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.work-item a {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+}
+
+.work-item img {
+    width: 100%;
+    height: 300px; 
+    object-fit: cover; /* Ensures images cover the specified dimensions */
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.work-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+    color: #F7F0F0;
+    padding: 20px;
+    text-align: center;
+    transform: translateY(100%);
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    opacity: 0; /* Initially hidden */
+}
+
+.work-item:hover {
+    transform: scale(1.05);
+}
+
+.work-item:hover .work-info {
+    transform: translateY(0);
+    opacity: 1; /* Fade in on hover */
+}
+
+.work-info h3 {
+    font-family: 'Neue Machina', sans-serif;
+    font-weight: lighter;
+    font-size: 1.2em;
+    margin: 10px 0;
+}
+
+.work-info p {
+    font-family: 'Neue Machina', sans-serif;
+    font-weight: lighter;
+    font-size: 1.1em;
+    margin: 0;
+}
+
+/* work animations*/
+.work-item {
+    opacity: 0; /* Start as invisible */
+    transform: translateY(30px) scale(0.9); /* Start with a slight downward offset and scale down */
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+/* When visible */
+.work-item.visible {
+    opacity: 1; /* Fade in */
+    transform: translateY(0) scale(1); /* Move to normal position and scale up */
+}
+
+
+/* Contact design */
+#contact {
+    background-color: #484349;
+    padding: 50px 20px;
+    text-align: center;
+    color: #F7F0F0;
+}
+
+#contact p {
+    font-family: Neue Machina, sans-serif;
+    font-weight: lighter;
+    font-size: 1.2em;
+    color: #B3ABAC;
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 30px;
+    max-width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.6;
+}
+
+#contact h2 {
+    font-family: Neue Machina, sans-serif;
+    font-weight: bold;
+    font-size: 2.5em;
+    color: #F7F0F0;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    text-align: center;
+    margin-bottom: 10px;
+    position: relative;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#contact h2::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 3px;
+    background-color: #F7F0F0;
+    margin: 10px auto 0 auto;
+    transition: width 0.3s ease;
+}
+
+#contact h2:hover::after {
+    width: 80px;
+}
+
+#contact p {
+    font-family: Neue Machina, sans-serif;
+    font-weight: lighter;
+    font-size: 1.2em;
+    margin-bottom: 15px;
+    color: #B3ABAC;
+}
+
+/* Styling for the icon container */
+#contact .icon-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px; /* Space between icons */
+}
+
+#contact .icon-container a {
+    display: inline-block;
+    text-decoration: none;
+}
+
+/* Styling for icons */
+#contact .icon-container img {
+    width: 50px; /* Set equal size for all icons */
+    height: 50px;
+    transition: transform 0.3s ease;
+}
+
+#contact .icon-container img:hover {
+    transform: scale(1.1); /* Slightly enlarge on hover */
+}
+
+/* Keyframes for typewriting effect */
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+@keyframes blink {
+    from { border-right-color: transparent; }
+    to { border-right-color: #F7F0F0; }
+}
+
+/* Class for the typewriting effect */
+.typewriter {
+    overflow: hidden; /* Hide text overflow */
+    white-space: nowrap; /* Keep text in a single line */
+    border-right: 2px solid #F7F0F0; /* Cursor effect */
+    width: 0; /* Start width at 0 */
+    animation: typing 3s steps(40, end) 1s 1 normal both, blink 0.75s step-end infinite; /* Typing and blinking cursor */
+    font-family: 'Neue Machina', sans-serif;
+    font-weight: lighter;
+    font-size: 1.2em;
+    color: #B3ABAC;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.hidden {
+    opacity: 0; /* Start hidden */
+    transition: opacity 0.6s ease; /* Fade in effect */
+}
+
+.visible {
+    opacity: 1; /* Fully visible */
+}
+
+
+/* Resume design*/
+#resume {
+    background-color: #484349;
+    padding: 50px 20px;
+    text-align: center;
+    color: #F7F0F0;
+}
+
+
+#resume h2 {
+    font-family: Neue Machina, sans-serif;
+    font-weight: bold;
+    font-size: 2.5em;
+    color: #F7F0F0;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    text-align: center;
+    margin-bottom: 10px;
+    position: relative;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#resume h2::after {
+    content: '';
+    display: block;
+    width: 40px;
+    height: 3px;
+    background-color: #F7F0F0;
+    transition: width 0.3s ease;
+    margin: 0 auto 15px auto;
+}
+
+#resume h2:hover::after {
+    width: 60px;
+}
+
+#resume p {
+    font-family: Neue Machina, sans-serif;
+    font-weight: lighter;
+    font-size: 1.3em;
+    margin-bottom: 15px;
+}
+
+#resume p a {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #F7F0F0;
+    color: #484349;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+#resume p a:hover {
+    background-color: #C9A5B4;
+    color: #F7F0F0;
+}
+
+/* Footer Section design */
+#footer {
+    background-color: #3A353B;
+    padding: 20px;
+    text-align: center;
+    color: #B3ABAC;
+    font-family: Neue Machina, sans-serif;
+    font-weight: lighter;
+    font-size: 0.9em;
+    border-top: 2px solid #F7F0F0;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+}
+
+#footer p {
+    margin: 0;
+    color: #F7F0F0;
+    letter-spacing: 0.05em;
+}
+
+
+/* Back to Top Button */
+#back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #F7F0F0;
+    color: #484349;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+    display: none; /* Hidden by default */
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+#back-to-top:hover {
+    background-color: #484349;
+    color: #F7F0F0;
+}
+
+/* Artwork Showcase design */
+#artwork {
+    background-color: #484349;
+    padding: 50px 20px;
+    text-align: center;
+    color: #F7F0F0;
+}
+
+
+#artwork .container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+#artwork h2 {
+    font-family: Neue Machina, sans-serif;
+    font-weight: light;
+    font-size: 2.5em;
+    color: #F7F0F0;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    text-align: center;
+    margin-bottom: 10px;
+    position: relative;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+#artwork h2::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 3px;
+    background-color: #F7F0F0;
+    margin: 10px auto 0 auto;
+    transition: width 0.3s ease;
+}
+
+#artwork h2:hover::after {
+    width: 80px;
+}
+
+#artwork p {
+    font-family: Neue Machina, sans-serif;
+    font-weight: li;
+    font-size: 1.2em;
+    margin-bottom: 30px;
+    color: #B3ABAC;
+}
+
+/* Grid layout for artwork */
+.artwork-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); 
+    gap: 20px;
+}
+
+.artwork-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+    cursor: pointer; /* Adds a pointer cursor on hover */
+}
+
+.artwork-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.artwork-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7); /* Slightly darker background for better contrast */
+    color: #F7F0F0;
+    padding: 20px;
+    text-align: center;
+    transform: translateY(100%);
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    opacity: 0; /* Initially hidden */
+}
+
+.artwork-item:hover {
+    transform: scale(1.05);
+}
+
+.artwork-item:hover .artwork-info {
+    transform: translateY(0);
+    opacity: 1; /* Fade in on hover */
+}
+
+.artwork-info p {
+    font-family: 'Arial', sans-serif;
+    font-size: 1.1em;
+    margin: 0;
+}
+
+/* artwork animation */
+.artwork-item {
+    opacity: 0; /* Start as invisible */
+    transform: translateY(30px) scale(0.9); /* Start with a slight downward offset and scale down */
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+/* When visible */
+.artwork-item.visible {
+    opacity: 1; /* Fade in */
+    transform: translateY(0) scale(1); /* Move to normal position and scale up */
+}
+
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+    nav {
+        padding: 10;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav a {
+        padding: 8px 0;
+    }
+
+    #back-to-top {
+        bottom: 20px;
+        right: 20px;
+        padding: 8px 12px;
+    }
+
+    section {
+        padding: 15px;
+    }
+
+    .work-item, .artwork-item {
+        margin-bottom: 20px;
+    }
+
+    .typewriter {
+        /* Adjust typewriter styles for mobile */
+        font-size: 1.2em;
+    }
+}
+
+/* Smaller Mobile Devices */
+@media (max-width: 480px) {
+    nav {
+
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav a {
+        padding: 6px 0;
+    }
+
+    #back-to-top {
+        bottom: 10px;
+        right: 10px;
+        padding: 6px 10px;
+    }
+
+    section {
+        padding: 10px;
+    }
+
+    .work-item, .artwork-item {
+        margin-bottom: 15px;
+    }
+
+    .typewriter {
+        font-size: 1em;
+    }
+}

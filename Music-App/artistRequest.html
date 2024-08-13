@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en-CA">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=500, initial-scale=1" />
+    <meta name="Jarrell" content="Jarrell Blay" />
+    <title>Request New Artist</title>
+    <link rel="stylesheet" href="./css/water.css" />
+  </head>
+
+  <body>
+    <h2>Request New Artist</h2>
+    <form id="requestArtistForm" action="/request-artist" method="post">
+      <!-- Name -->
+      <label for="artistName">Artist's Name:</label>
+      <input type="text" id="artistName" name="artistName" required>
+
+      <!-- Genre -->
+      <label for="genre">Genre:</label>
+      <input list="genres" id="genre" name="genre" required>
+      <datalist id="genres">
+        <option value="Pop">
+        <option value="Rock">
+        <option value="Hip Hop">
+        <option value="Soul">
+        <option value="RnB">
+      </datalist>
+
+      <!-- Social Media -->
+      <label for="socialMedia">Social Media Links:</label>
+      <input type="url" id="socialMedia" name="socialMedia" multiple>
+
+      <!-- Song Links -->
+      <label for="songLinks">Song/Video Links:</label>
+      <div id="songLinksContainer">
+        <input type="url" name="songLink" required>
+        <button type="button" onclick="addSongLink()">Add</button>
+      </div>
+
+      <!-- Explicit Lyrics -->
+      <label for="explicitLyrics">Explicit Lyrics:</label>
+      <input type="checkbox" id="explicitLyrics" name="explicitLyrics">
+
+      <!-- description -->
+      <label for="description">Reason for Addition:</label>
+      <textarea id="description" name="description" rows="4" required></textarea>
+
+      <!-- Button -->
+      <button type="submit">Submit Request</button>
+    </form>
+      <script>  
+      document.getElementById('requestArtistForm').addEventListener('submit', function(event) {
+        event.preventDefault();
+        // Display a prompt message when the form is submitted
+        alert("Your Request Will Be Under Review. Thank you!");
+        // Redirect to the main page after clicking 'ok'
+        window.location.href = "index.html";
+      });
+      </script>
+  </body>
+</html>
