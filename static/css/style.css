@@ -74,6 +74,7 @@ header {
     padding: 10px 0;
     text-align: center;
     font-family: 'Aesthetic', sans-serif;
+    animation: pulse 2s infinite;
 }
 
 header h1 {
