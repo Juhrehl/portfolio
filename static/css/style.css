@@ -1,3 +1,27 @@
+@font-face {
+    font-family: 'MyCustomFont';
+    src: url('../fonts/NeueMachina-Regular.otf') format('opentype'),
+         url('../fonts/NeueMachina-Light.otf') format('opentype'),
+         url('../fonts/NeueMachina-Ultrabold.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Aesthetic';
+    src: url('../fonts/Aesthetic-Regular.otf') format('opentype'),
+         url('../fonts/Aesthetic-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Blissful Beauty Demo';
+    src: url('../fonts/Blissfull\ Beauty\ Demo.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
 body{
     margin: 0;
     padding: 0;
