@@ -1,26 +1,57 @@
 @font-face {
-    font-family: 'Neue Machina';
-    src: url('../fonts/NeueMachina-Regular.otf') format('opentype'),
-         url('../fonts/NeueMachina-Light.otf') format('opentype'),
-         url('../fonts/NeueMachina-Ultrabold.otf') format('opentype');
+    font-family: 'Aesthetic';
+    src: url('../fonts/Aesthetic-Regular.woff') format('woff'),
+        url('../fonts/Aesthetic-Regular.woff2') format('woff2');
     font-weight: normal;
     font-style: normal;
+    font-display: swap;
 }
 
 @font-face {
     font-family: 'Aesthetic';
-    src: url('../fonts/Aesthetic-Regular.otf') format('opentype'),
-         url('../fonts/Aesthetic-Regular.ttf') format('truetype');
+    src: url('../fonts/Aesthetic-Regular.woff2') format('woff2'),
+        url('../fonts/Aesthetic-Regular.woff') format('woff');
     font-weight: normal;
     font-style: normal;
+    font-display: swap;
 }
 
 @font-face {
     font-family: 'Blissful Beauty Demo';
-    src: url('../fonts/Blissfull\ Beauty\ Demo.otf') format('opentype');
+    src: url('../fonts/BlissfulBeautyDemo.woff2') format('woff2'),
+        url('../fonts/BlissfulBeautyDemo.woff') format('woff');
     font-weight: normal;
     font-style: normal;
+    font-display: swap;
 }
+
+@font-face {
+    font-family: 'Neue Machina';
+    src: url('../fonts/NeueMachina-Regular.woff2') format('woff2'),
+        url('../fonts/NeueMachina-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Neue Machina';
+    src: url('../fonts/NeueMachina-Ultrabold.woff2') format('woff2'),
+        url('../fonts/NeueMachina-Ultrabold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Neue Machina';
+    src: url('../fonts/NeueMachina-Light.woff2') format('woff2'),
+        url('../fonts/NeueMachina-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
 
 body{
     margin: 0;
