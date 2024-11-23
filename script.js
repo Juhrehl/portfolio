@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-// nav scroll function
+// Nav scroll function
 window.onscroll = function() {
     const nav = document.querySelector('nav');
     if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
@@ -35,10 +35,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const observer = new IntersectionObserver(entries => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                // Add the 'visible' class to animate the section
                 aboutSection.classList.add('visible');
             } else {
-                // Remove the 'visible' class to reset the animation
                 aboutSection.classList.remove('visible');
             }
         });
@@ -50,7 +48,7 @@ document.addEventListener('DOMContentLoaded', () => {
     observer.observe(aboutSection);
 });
 
-// work scroll animation
+// Work scroll animation
 document.addEventListener('DOMContentLoaded', () => {
     const workItems = document.querySelectorAll('.work-item');
 
@@ -58,10 +56,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const observer = new IntersectionObserver(entries => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                // Add the 'visible' class to animate the work item
                 entry.target.classList.add('visible');
             } else {
-                // Remove the 'visible' class to reset the animation
                 entry.target.classList.remove('visible');
             }
         });
@@ -75,7 +71,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-// artwork scroll animation
+// Artwork scroll animation
 document.addEventListener('DOMContentLoaded', () => {
     const artworkItems = document.querySelectorAll('.artwork-item');
 
@@ -83,10 +79,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const observer = new IntersectionObserver(entries => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                // Add the 'visible' class to animate the work item
                 entry.target.classList.add('visible');
             } else {
-                // Remove the 'visible' class to reset the animation
                 entry.target.classList.remove('visible');
             }
         });
@@ -94,13 +88,13 @@ document.addEventListener('DOMContentLoaded', () => {
         threshold: 0.2 // Trigger the animation when at least 20% of the element is visible
     });
 
-    // Observe each work item
+    // Observe each artwork item
     artworkItems.forEach(item => {
         observer.observe(item);
     });
 });
 
-// typewriting animation
+// Typewriting animation
 document.addEventListener('DOMContentLoaded', () => {
     const typewriterElement = document.querySelector('.typewriter');
 
@@ -108,10 +102,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const observer = new IntersectionObserver(entries => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                // Add the 'visible' class to trigger the animation
                 typewriterElement.classList.add('visible');
             } else {
-                // Remove the 'visible' class to reset the animation
                 typewriterElement.classList.remove('visible');
             }
         });
@@ -123,3 +115,25 @@ document.addEventListener('DOMContentLoaded', () => {
     observer.observe(typewriterElement);
 });
 
+// Services scroll animation
+document.addEventListener('DOMContentLoaded', () => {
+    const services = document.querySelectorAll('.service');
+
+    // Create an intersection observer instance
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+            } else {
+                entry.target.classList.remove('visible');
+            }
+        });
+    }, {
+        threshold: 0.2 // Trigger the animation when at least 20% of the element is visible
+    });
+
+    // Observe each service
+    services.forEach(service => {
+        observer.observe(service);
+    });
+});

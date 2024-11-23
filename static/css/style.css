@@ -281,6 +281,157 @@ nav a:hover {
     transform: rotateY(0) scale(1); /* Rotate to normal and scale up */
 }
 
+/* Service Section Styling */
+#services {
+    background-color: #484349;
+    padding: 60px 20px;
+    animation: fadeIn 1s ease-in-out; /* Section fade-in effect */
+  }
+  
+  #services .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  #services h2 {
+    font-family: Neue Machina, sans-serif;
+    font-weight: bold;
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: #F7F0F0;
+    margin-bottom: 40px;
+    animation: slideInFromLeft 1s ease-in-out;
+  }
+  
+  .services-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    justify-content: center;
+    animation: fadeInUp 1.5s ease-in-out; /* Grid fade-in with upward motion */
+  }
+  
+  .service {
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    opacity: 0; /* Start hidden for animation */
+    transform: translateY(30px); /* Start slightly below */
+    animation: cardAppear 0.8s ease-in-out forwards;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+
+  
+  .service:nth-child(1) {
+    animation-delay: 0.3s;
+  }
+  
+  .service:nth-child(2) {
+    animation-delay: 0.5s;
+  }
+  
+  .service:nth-child(3) {
+    animation-delay: 0.7s;
+  }
+  
+  .service:nth-child(4) {
+    animation-delay: 0.9s;
+  }
+  
+  .service:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  .service img {
+    max-width: 200px;
+    margin-bottom: 15px;
+    animation: zoomIn 1s ease-in-out;
+  }
+  
+  .service h3 {
+    font-family: Neue Machina, sans-serif;
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .service p {
+    font-family: Neue Machina, sans-serif;
+    font-weight: lighter;
+    font-size: 1rem;
+    color: #777;
+    line-height: 1.6;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .services-container {
+      grid-template-columns: 1fr;
+      gap: 30px;
+    }
+  }
+  
+  /* Keyframes for Animations */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes slideInFromLeft {
+    from {
+      opacity: 0;
+      transform: translateX(-50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes cardAppear {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes zoomIn {
+    from {
+      opacity: 0;
+      transform: scale(0.8);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  
+
 
 /* Work design */
 #work {
@@ -737,6 +888,14 @@ nav a:hover {
     font-family: 'Arial', sans-serif;
     font-size: 1.1em;
     margin: 0;
+}
+
+/* style for artwork video */
+.artwork-item video {
+    width: 100%; /* Make the video fill the container */
+    height: auto; /* Maintain the aspect ratio */
+    border-radius: 10px; /* Optional: Add rounded corners to the video */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Optional: Add a shadow effect */
 }
 
 /* artwork animation */
